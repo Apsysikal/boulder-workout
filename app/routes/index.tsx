@@ -1,32 +1,18 @@
-export default function Index() {
+import { Link } from "@remix-run/react";
+
+export default function IndexRoute() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+    <>
+      <h1>Welcome to Boulder Workout</h1>
+      <p>Keep track of your workouts and progress with this simple web app.</p>
       <ul>
         <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
+          <Link to="workouts">Workouts</Link>
         </li>
         <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
+          <Link to="exercises">Exercices</Link>
         </li>
       </ul>
-    </div>
+    </>
   );
 }
